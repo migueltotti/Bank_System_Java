@@ -87,6 +87,9 @@ public class BankManagement extends JFrame {
 				}
 				else {
 					UserPage userPage = new UserPage();
+					userPage.setAccount(bank.getAccount(textEmail.getText()));
+					//System.out.println(bank.getAccount(textEmail.getText()));
+					userPage.setBank(bank);
 					userPage.setVisible(true);
 					dispose();
 				}

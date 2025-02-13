@@ -15,7 +15,20 @@ public class User {
 		this.email = email;
 		this.senha = senha;
 	}
+	
+	public User(int id, String name, String email, String senha) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.senha = senha;
+	}
 
+	@Override
+	public String toString() {
+		return  id + ";" + name + ";" + email + ";" + senha;
+	}	
+		
 	public int getId() {
 		return id;
 	}

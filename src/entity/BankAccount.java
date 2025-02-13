@@ -15,6 +15,19 @@ public class BankAccount {
 		this.amount = 0;
 		this.maxWithDraw = maxWithDraw;
 	}
+	
+	public BankAccount(int id, User holder, double amount, double maxWithDraw) {
+		super();
+		this.id = id;
+		this.holder = holder;
+		this.amount = amount;
+		this.maxWithDraw = maxWithDraw;
+	}
+	
+	@Override
+	public String toString() {
+		return  ";" + id + ";" + holder + ";" + amount + ";" + maxWithDraw;
+	}
 
 	public int getId() {
 		return id;
@@ -40,7 +53,7 @@ public class BankAccount {
 		if(amount < 0)
 			return false;
 		
-		if(amount < this.amount)
+		if(amount > this.amount)
 			return false;
 		
 		this.amount -= amount;
@@ -70,12 +83,5 @@ public class BankAccount {
 		
 		return this.id == bk.id;
 	}
-
-	@Override
-	public String toString() {
-		// TODO Auto-generated method stub
-		return "Nome: " + getHolder().getName();
-	}
-	
 	
 }
